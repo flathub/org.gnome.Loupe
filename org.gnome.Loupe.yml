@@ -116,6 +116,22 @@ modules:
           versions:
             <: '40.0'
 
+  - name: gtk
+    buildsystem: meson
+    config-opts:
+      - -Dbuild-testsuite=false
+      - -Dgtk_doc=false
+      - -Dintrospection=disabled
+      - -Dbuild-tests=false
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/gtk/4.11/gtk-4.11.1.tar.xz
+        sha256: 07c03dc3f6ce5d699672ee4fdea6a439953ff95f8e6050858187f38b57e7d635
+        x-checker-data:
+          type: gnome
+          name: gtk
+          stable-only: false
+
   - name: loupe
     buildsystem: meson
     sources:
