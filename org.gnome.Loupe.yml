@@ -136,8 +136,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/44/loupe-44.0.tar.xz
-        sha256: e8b3d18c9037025954f49b460d31e122cadb00cca32aa6d83318b737a3090134
+        url: https://download.gnome.org/sources/loupe/44/loupe-44.1.tar.xz
+        sha256: 98fbb62b8adc3978f3c92a1a0e8baeb5855d866761273e3adf37c13fb889d3a3
         x-checker-data:
           type: gnome
           name: loupe
