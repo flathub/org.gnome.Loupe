@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libheif.git
-        commit: 516ef5522680c7cb62768a34ecb24f3b165ec8b4
-        tag: v1.15.2
+        commit: 2f88e23bf2a4379b680b913780b7a7a672a4face
+        tag: v1.16.1
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -125,8 +125,8 @@ modules:
       - -Dbuild-tests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtk/4.11/gtk-4.11.1.tar.xz
-        sha256: 07c03dc3f6ce5d699672ee4fdea6a439953ff95f8e6050858187f38b57e7d635
+        url: https://download.gnome.org/sources/gtk/4.11/gtk-4.11.2.tar.xz
+        sha256: 4a481da6b65b6add3f59966b0bb27e8139c381d0699402df662df2ce1c9e6913
         x-checker-data:
           type: gnome
           name: gtk
