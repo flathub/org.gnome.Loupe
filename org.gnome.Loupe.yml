@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libheif.git
-        commit: 516ef5522680c7cb62768a34ecb24f3b165ec8b4
-        tag: v1.15.2
+        commit: 2f88e23bf2a4379b680b913780b7a7a672a4face
+        tag: v1.16.1
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -125,19 +125,82 @@ modules:
       - -Dbuild-tests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtk/4.11/gtk-4.11.1.tar.xz
-        sha256: 07c03dc3f6ce5d699672ee4fdea6a439953ff95f8e6050858187f38b57e7d635
+        url: https://download.gnome.org/sources/gtk/4.11/gtk-4.11.2.tar.xz
+        sha256: 4a481da6b65b6add3f59966b0bb27e8139c381d0699402df662df2ce1c9e6913
         x-checker-data:
           type: gnome
           name: gtk
           stable-only: false
 
+  - name: libsass
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/lazka/libsass.git
+        branch: meson
+        commit: aac79dccd3c8f7e8f22125f87a119f3b1ee9d487
+
+  - name: sassc
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/lazka/sassc.git
+        branch: meson
+        commit: a1950c2d95ea4c051feb90bb1f43559fbb54bf36
+
+  - name: libyaml
+    sources:
+    - type: git
+      url: https://github.com/yaml/libyaml.git
+      commit: 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
+
+  - name: libxmlb
+    buildsystem: meson
+    config-opts:
+    - "-Dintrospection=false"
+    - "-Dgtkdoc=false"
+    - "-Dstemmer=false"
+    - "-Dcli=false"
+    - "-Dtests=false"
+    sources:
+    - type: git
+      url: https://github.com/hughsie/libxmlb.git
+      commit: 6191220071233972d798b57841d08e4964952a17
+
+  - name: appstream
+    buildsystem: meson
+    config-opts:
+      - -Dstemming=false
+      - -Ddocs=false
+      - -Dgir=false
+    sources:
+      - type: git
+        url: https://github.com/ximion/appstream.git
+        tag: v0.16.2
+        commit: 1ee6af91310f9deb47f3863a7a7ffb22c46bcce6
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+
+  - name: libadwaita
+    buildsystem: meson
+    config-opts:
+      - -Dtests=false
+      - -Dvapi=false
+      - -Dintrospection=disabled
+      - -Dgtk_doc=false
+      - -Dexamples=false
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/GNOME/libadwaita.git
+        commit: 081673f4d099edce7d31af5006df871ee60b7d98
+
   - name: loupe
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/44/loupe-44.2.tar.xz
-        sha256: 4573e59609d0ac8a43346ad2eec77c16e353bdbaada69dfc1ac6416fea79d70a
+        url: https://download.gnome.org/sources/loupe/44/loupe-44.3.tar.xz
+        sha256: 3feba942b6d1494f860c51a3626e1632db8aa4a6eb272788d59049d1021395f0
         x-checker-data:
           type: gnome
           name: loupe
