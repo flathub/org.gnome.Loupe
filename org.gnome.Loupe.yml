@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libheif.git
-        commit: 2f88e23bf2a4379b680b913780b7a7a672a4face
-        tag: v1.16.1
+        commit: 6ee6762657cfb0a921860d1a9d4cf36fa0eb5633
+        tag: v1.16.2
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -150,22 +150,22 @@ modules:
 
   - name: libyaml
     sources:
-    - type: git
-      url: https://github.com/yaml/libyaml.git
-      commit: 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
+      - type: git
+        url: https://github.com/yaml/libyaml.git
+        commit: 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
 
   - name: libxmlb
     buildsystem: meson
     config-opts:
-    - "-Dintrospection=false"
-    - "-Dgtkdoc=false"
-    - "-Dstemmer=false"
-    - "-Dcli=false"
-    - "-Dtests=false"
+      - -Dintrospection=false
+      - -Dgtkdoc=false
+      - -Dstemmer=false
+      - -Dcli=false
+      - -Dtests=false
     sources:
-    - type: git
-      url: https://github.com/hughsie/libxmlb.git
-      commit: 6191220071233972d798b57841d08e4964952a17
+      - type: git
+        url: https://github.com/hughsie/libxmlb.git
+        commit: 6191220071233972d798b57841d08e4964952a17
 
   - name: appstream
     buildsystem: meson
