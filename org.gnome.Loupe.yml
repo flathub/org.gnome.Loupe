@@ -52,8 +52,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libde265.git
-        commit: e255f0571a46935955deef15808e52b18043788c
-        tag: v1.0.11
+        commit: a267c84707ab264928fa9b86de2ee749c48c318c
+        tag: v1.0.12
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -125,8 +125,8 @@ modules:
       - -Dbuild-tests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtk/4.11/gtk-4.11.2.tar.xz
-        sha256: 4a481da6b65b6add3f59966b0bb27e8139c381d0699402df662df2ce1c9e6913
+        url: https://download.gnome.org/sources/gtk/4.12/gtk-4.12.0.tar.xz
+        sha256: a6d10829f405b1afc0b65e2a9642c04126a1d1b638d11c6d97426da4f84f1f6f
         x-checker-data:
           type: gnome
           name: gtk
