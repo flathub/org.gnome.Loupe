@@ -52,8 +52,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libde265.git
-        commit: e255f0571a46935955deef15808e52b18043788c
-        tag: v1.0.11
+        commit: a267c84707ab264928fa9b86de2ee749c48c318c
+        tag: v1.0.12
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -116,6 +116,13 @@ modules:
           versions:
             <: '40.0'
 
+  - name: cairo
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/cairo/cairo.git
+        commit: 542bfac286a945aa584f7dc2376f1f9f33b37ac9
+
   - name: gtk
     buildsystem: meson
     config-opts:
@@ -125,8 +132,8 @@ modules:
       - -Dbuild-tests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtk/4.11/gtk-4.11.2.tar.xz
-        sha256: 4a481da6b65b6add3f59966b0bb27e8139c381d0699402df662df2ce1c9e6913
+        url: https://download.gnome.org/sources/gtk/4.12/gtk-4.12.0.tar.xz
+        sha256: a6d10829f405b1afc0b65e2a9642c04126a1d1b638d11c6d97426da4f84f1f6f
         x-checker-data:
           type: gnome
           name: gtk
@@ -191,17 +198,36 @@ modules:
       - -Dgtk_doc=false
       - -Dexamples=false
     sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/libadwaita.git
-        commit: 081673f4d099edce7d31af5006df871ee60b7d98
+      - type: archive
+        url: https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.beta.tar.xz
+        sha256: 5b6a0e51fd7b6273564ce937a9d302ca683e61f05791b09a36a881d3952128a4
+        x-checker-data:
+          type: gnome
+          name: libadwaita
+          stable-only: false
 
-  - name: loupe
+  - name: glycin-loaders
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/44/loupe-44.3.tar.xz
-        sha256: 3feba942b6d1494f860c51a3626e1632db8aa4a6eb272788d59049d1021395f0
+        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.beta.tar.xz
+        sha256: 8c336bdf42ee26abb2aaaca36ef641d4e8468a602bf3d142518b7c3fbc1912b1
+        x-checker-data:
+          type: gnome
+          name: glycin-loaders
+          stable-only: false
+
+  - name: loupe
+    buildsystem: meson
+    # Can be remove with next version
+    config-opts:
+        - -Ddisable-glycin-sandbox=false
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/loupe/45/loupe-45.beta.tar.xz
+        sha256: 4458a49fafa3957168b31f2be968de4d98e413e0ee51e278a6e9e17a550a4a86
         x-checker-data:
           type: gnome
           name: loupe
+          stable-only: false
 
