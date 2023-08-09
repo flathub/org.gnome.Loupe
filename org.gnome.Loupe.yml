@@ -210,8 +210,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.beta.tar.xz
-        sha256: 8c336bdf42ee26abb2aaaca36ef641d4e8468a602bf3d142518b7c3fbc1912b1
+        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.beta.1.tar.xz
+        sha256: d999a690db44e4bc879fa7d721f1c55cf7da9591446f760107c3c8b9ac846a7e
         x-checker-data:
           type: gnome
           name: glycin-loaders
@@ -221,7 +221,7 @@ modules:
     buildsystem: meson
     # Can be remove with next version
     config-opts:
-        - -Ddisable-glycin-sandbox=false
+      - -Ddisable-glycin-sandbox=false
     sources:
       - type: archive
         url: https://download.gnome.org/sources/loupe/45/loupe-45.beta.tar.xz
