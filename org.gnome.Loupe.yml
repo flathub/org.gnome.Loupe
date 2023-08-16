@@ -210,8 +210,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.beta.2.tar.xz
-        sha256: 1b0c701f33035455894df98afc212820248b131272b83bfbdbf83510e19c8813
+        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.beta.3.tar.xz
+        sha256: b5b2667b8913d291a65fb36b3731cfee661d86b4b215f27e3711f30c62a96c21
         x-checker-data:
           type: gnome
           name: glycin-loaders
