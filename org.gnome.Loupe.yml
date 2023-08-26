@@ -132,8 +132,8 @@ modules:
       - -Dbuild-tests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtk/4.12/gtk-4.12.1.tar.xz
-        sha256: b8b61d6cf94fac64bf3a0bfc7af137c9dd2f8360033fdeb0cfe9612b77a99a72
+        url: https://download.gnome.org/sources/gtk/4.13/gtk-4.13.0.tar.xz
+        sha256: 0e2e928a271ac5ef9c95d891a2b9a8c46df9598d12efd9ccfa31695e88cab6aa
         x-checker-data:
           type: gnome
           name: gtk
