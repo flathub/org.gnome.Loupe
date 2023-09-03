@@ -132,8 +132,8 @@ modules:
       - -Dbuild-tests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtk/4.12/gtk-4.12.1.tar.xz
-        sha256: b8b61d6cf94fac64bf3a0bfc7af137c9dd2f8360033fdeb0cfe9612b77a99a72
+        url: https://download.gnome.org/sources/gtk/4.13/gtk-4.13.0.tar.xz
+        sha256: 0e2e928a271ac5ef9c95d891a2b9a8c46df9598d12efd9ccfa31695e88cab6aa
         x-checker-data:
           type: gnome
           name: gtk
@@ -199,8 +199,8 @@ modules:
       - -Dexamples=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.beta.tar.xz
-        sha256: 5b6a0e51fd7b6273564ce937a9d302ca683e61f05791b09a36a881d3952128a4
+        url: https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.rc.tar.xz
+        sha256: c9ebf05d16954a4b4d1c26ea87e52f662346d8fa90b70f8165bead0721a1ed10
         x-checker-data:
           type: gnome
           name: libadwaita
@@ -210,8 +210,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.beta.4.tar.xz
-        sha256: 9ef09baa70fddfabdef697256c1dad6a63b0d4a4401fdc3941192af3dc6b63ba
+        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.rc.tar.xz
+        sha256: ab430c70e9c52e14a3786427072b8aaca0bb21d32061c139d9d82575798a1e42
         x-checker-data:
           type: gnome
           name: glycin-loaders
