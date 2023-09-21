@@ -1,10 +1,10 @@
 id: org.gnome.Loupe
 runtime: org.gnome.Platform
-runtime-version: '44'
+runtime-version: '45'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-  - org.freedesktop.Sdk.Extension.llvm15
+  - org.freedesktop.Sdk.Extension.llvm16
 command: loupe
 finish-args:
   # Graphics
@@ -19,7 +19,7 @@ finish-args:
   - --filesystem=xdg-run/gvfs
   - --filesystem=xdg-run/gvfsd
 build-options:
-  append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm15/bin
+  append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm16/bin
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -108,114 +108,23 @@ modules:
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libgweather/4.2/libgweather-4.2.0.tar.xz
-        sha256: af8a812da0d8976a000e1d62572c256086a817323fbf35b066dbfdd8d2ca6203
+        url: https://download.gnome.org/sources/libgweather/4.4/libgweather-4.4.0.tar.xz
+        sha256: 366e866ff2a708b894cfea9475b8e8ff54cb3e2b477ea72a8ade0dabee5f48a4
         x-checker-data:
           type: gnome
           name: libgweather
           versions:
             <: '40.0'
 
-  - name: cairo
-    buildsystem: meson
-    sources:
-      - type: git
-        url: https://gitlab.freedesktop.org/cairo/cairo.git
-        commit: 7645586223cea9f5313253bd8cde96a0a4007905
-
-  - name: gtk
-    buildsystem: meson
-    config-opts:
-      - -Dbuild-testsuite=false
-      - -Dgtk_doc=false
-      - -Dintrospection=disabled
-      - -Dbuild-tests=false
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/gtk/4.12/gtk-4.12.1.tar.xz
-        sha256: b8b61d6cf94fac64bf3a0bfc7af137c9dd2f8360033fdeb0cfe9612b77a99a72
-        x-checker-data:
-          type: gnome
-          name: gtk
-          stable-only: false
-
-  - name: libsass
-    buildsystem: meson
-    sources:
-      - type: git
-        url: https://github.com/lazka/libsass.git
-        branch: meson
-        commit: aac79dccd3c8f7e8f22125f87a119f3b1ee9d487
-
-  - name: sassc
-    buildsystem: meson
-    sources:
-      - type: git
-        url: https://github.com/lazka/sassc.git
-        branch: meson
-        commit: a1950c2d95ea4c051feb90bb1f43559fbb54bf36
-
-  - name: libyaml
-    sources:
-      - type: git
-        url: https://github.com/yaml/libyaml.git
-        commit: 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
-
-  - name: libxmlb
-    buildsystem: meson
-    config-opts:
-      - -Dintrospection=false
-      - -Dgtkdoc=false
-      - -Dstemmer=false
-      - -Dcli=false
-      - -Dtests=false
-    sources:
-      - type: git
-        url: https://github.com/hughsie/libxmlb.git
-        commit: 3be2235c9be79c0ece789d3d50c52c15be31829d
-
-  - name: appstream
-    buildsystem: meson
-    config-opts:
-      - -Dstemming=false
-      - -Ddocs=false
-      - -Dgir=false
-    sources:
-      - type: git
-        url: https://github.com/ximion/appstream.git
-        tag: v0.16.3
-        commit: 50026949a9a9559d9fedbf577e60073b38ebee6d
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
-
-  - name: libadwaita
-    buildsystem: meson
-    config-opts:
-      - -Dtests=false
-      - -Dvapi=false
-      - -Dintrospection=disabled
-      - -Dgtk_doc=false
-      - -Dexamples=false
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.beta.tar.xz
-        sha256: 5b6a0e51fd7b6273564ce937a9d302ca683e61f05791b09a36a881d3952128a4
-        x-checker-data:
-          type: gnome
-          name: libadwaita
-          stable-only: false
-
   - name: glycin-loaders
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.beta.4.tar.xz
-        sha256: 9ef09baa70fddfabdef697256c1dad6a63b0d4a4401fdc3941192af3dc6b63ba
+        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.1.tar.xz
+        sha256: 27ccb302c57298e2a55eeefc6bcbcca68763f87b4804ecb8d0a7e45c72dfb955
         x-checker-data:
           type: gnome
           name: glycin-loaders
-          stable-only: false
 
   - name: loupe
     buildsystem: meson
@@ -224,10 +133,8 @@ modules:
       - -Ddisable-glycin-sandbox=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/45/loupe-45.beta.1.tar.xz
-        sha256: b82be7ac580692c6cf563b57ffed97e4ace54585b31fd33404a406a6507746bf
+        url: https://download.gnome.org/sources/loupe/45/loupe-45.0.tar.xz
+        sha256: 4d648fe3b6bfea5529986596d6a450a76d397f1df0a8d8eedecf010406221471
         x-checker-data:
           type: gnome
           name: loupe
-          stable-only: false
-
