@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libheif.git
-        commit: 6ee6762657cfb0a921860d1a9d4cf36fa0eb5633
-        tag: v1.16.2
+        commit: 5f12a962f289cba12942287273b87a8f05c93895
+        tag: v1.17.1
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
