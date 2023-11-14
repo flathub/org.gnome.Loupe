@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libheif.git
-        commit: 6ee6762657cfb0a921860d1a9d4cf36fa0eb5633
-        tag: v1.16.2
+        commit: 8bc6fce34947dfce7a894d19931b0f9b4d7fe30e
+        tag: v1.17.3
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -120,8 +120,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.1.tar.xz
-        sha256: 27ccb302c57298e2a55eeefc6bcbcca68763f87b4804ecb8d0a7e45c72dfb955
+        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.2.tar.xz
+        sha256: c76c01925abd070174589ccb916a44a573ab65b1e9d493f154e42756431e6dd7
         x-checker-data:
           type: gnome
           name: glycin-loaders
@@ -133,8 +133,8 @@ modules:
       - -Ddisable-glycin-sandbox=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/45/loupe-45.0.tar.xz
-        sha256: 4d648fe3b6bfea5529986596d6a450a76d397f1df0a8d8eedecf010406221471
+        url: https://download.gnome.org/sources/loupe/45/loupe-45.1.tar.xz
+        sha256: 9d7fa278a100487294419a28a6f0a8d5918bd979d1cb4b46a85e8f7ded14d3ec
         x-checker-data:
           type: gnome
           name: loupe
