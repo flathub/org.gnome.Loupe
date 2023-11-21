@@ -52,8 +52,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libde265.git
-        commit: a267c84707ab264928fa9b86de2ee749c48c318c
-        tag: v1.0.12
+        commit: 7065a5304bff5b024fbbb55f2d5cee1c4ad988fd
+        tag: v1.0.14
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libheif.git
-        commit: 8bc6fce34947dfce7a894d19931b0f9b4d7fe30e
-        tag: v1.17.3
+        commit: 82219b903001305fd916874a29dd372d92927d48
+        tag: v1.17.5
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
