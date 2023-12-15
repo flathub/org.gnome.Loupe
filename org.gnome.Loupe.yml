@@ -133,8 +133,8 @@ modules:
       - -Ddisable-glycin-sandbox=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/45/loupe-45.2.tar.xz
-        sha256: b8b3ffaf3657026b17e04f19e040cba8d51eb4d0cab54e42295b0e5a5271c0ab
+        url: https://download.gnome.org/sources/loupe/45/loupe-45.3.tar.xz
+        sha256: f65f2d1208d085ab5ffa998dd43c92fe952272d4d59b51cfecc11ebdffca2d86
         x-checker-data:
           type: gnome
           name: loupe
