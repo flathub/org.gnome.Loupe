@@ -52,8 +52,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libde265.git
-        commit: 7065a5304bff5b024fbbb55f2d5cee1c4ad988fd
-        tag: v1.0.14
+        commit: 17bb8d9fcea62db8cdeb0fc7ef8d15dbd19a22e4
+        tag: v1.0.15
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libheif.git
-        commit: 82219b903001305fd916874a29dd372d92927d48
-        tag: v1.17.5
+        commit: 59b58566de0d8e2e9fea958abeba1d3346bda9de
+        tag: v1.17.6
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -120,8 +120,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-0.1.2.tar.xz
-        sha256: c76c01925abd070174589ccb916a44a573ab65b1e9d493f154e42756431e6dd7
+        url: https://download.gnome.org/sources/glycin-loaders/1.0/glycin-loaders-1.0.alpha.tar.xz
+        sha256: 18da75ae90ff70d5729e526b577b4fdc3e8c5156885eea6596ef6662eb40733d
         x-checker-data:
           type: gnome
           name: glycin-loaders
