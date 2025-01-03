@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libheif.git
-        commit: bf35e9eb25af8f2b7917996ad9ba849d922f8d15
-        tag: v1.18.2
+        commit: cd95b113d78d0696105a9e678cbd19487ee13d6c
+        tag: v1.19.5
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -123,8 +123,8 @@ modules:
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin/1.1/glycin-1.1.2.tar.xz
-        sha256: 41c72be1ec9ba55da90c82fc18573b742dff582b09afc37b4565c47e99cc8ff4
+        url: https://download.gnome.org/sources/glycin/1.2/glycin-1.2.alpha.9.tar.xz
+        sha256: 30f7cc7a8fe7a0a2d20034f5adb4e3ac3429db2c092cbf2ce7894fe42c38bca9
         x-checker-data:
           type: gnome
           name: glycin
