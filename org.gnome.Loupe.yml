@@ -1,6 +1,6 @@
 id: org.gnome.Loupe
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/strukturag/libheif.git
-        commit: bf35e9eb25af8f2b7917996ad9ba849d922f8d15
-        tag: v1.18.2
+        commit: c22636155fc6848b71ad77971159e6e1cc349cce
+        tag: v1.19.7
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -123,8 +123,8 @@ modules:
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin/1.1/glycin-1.1.2.tar.xz
-        sha256: 41c72be1ec9ba55da90c82fc18573b742dff582b09afc37b4565c47e99cc8ff4
+        url: https://download.gnome.org/sources/glycin/1.2/glycin-1.2.0.tar.xz
+        sha256: 16ab4a48398639ef701c7c3e27a2d31075b30e0dcaf3f1652c907b188f4290d0
         x-checker-data:
           type: gnome
           name: glycin
@@ -133,8 +133,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/47/loupe-47.2.tar.xz
-        sha256: 6e046efe4f7ae57ee2748d52d1d07356c7449d204a3d31d0b42367a801974a15
+        url: https://download.gnome.org/sources/loupe/48/loupe-48.0.tar.xz
+        sha256: 21492b2382eba86b97571b4cc08c1eb0201ce5e96bd2b9b5333893f85fbd1d7d
         x-checker-data:
           type: gnome
           name: loupe
