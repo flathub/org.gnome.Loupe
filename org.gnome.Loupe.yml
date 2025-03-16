@@ -94,3 +94,10 @@ modules:
         x-checker-data:
           type: gnome
           name: loupe
+      # generated via flatpak-builder-tools
+      - generated-sources.json
+      # copy generated cargo config
+      - type: shell
+        commands:
+          - mkdir .cargo
+          - cp cargo/config .cargo/
