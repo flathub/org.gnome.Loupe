@@ -32,11 +32,11 @@ cleanup:
   - '*.a'
 add-extensions:
   org.freedesktop.Platform.ffmpeg-full:
-      version: "24.08"
-      directory: lib/ffmpeg
-      add-ld-path: "."
-      no-autodownload: false
-      autodelete: false
+    version: '24.08'
+    directory: lib/ffmpeg
+    add-ld-path: .
+    no-autodownload: false
+    autodelete: false
 cleanup-commands:
   - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
 modules:
@@ -79,8 +79,8 @@ modules:
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin/1.2/glycin-1.2.0.tar.xz
-        sha256: 16ab4a48398639ef701c7c3e27a2d31075b30e0dcaf3f1652c907b188f4290d0
+        url: https://download.gnome.org/sources/glycin/1.2/glycin-1.2.1.tar.xz
+        sha256: ccc578e9a3e83d0dc1535737d1fda09baa95c7167f5e5ecb15f786654094eed5
         x-checker-data:
           type: gnome
           name: glycin
@@ -89,8 +89,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/48/loupe-48.0.tar.xz
-        sha256: 21492b2382eba86b97571b4cc08c1eb0201ce5e96bd2b9b5333893f85fbd1d7d
+        url: https://download.gnome.org/sources/loupe/48/loupe-48.1.tar.xz
+        sha256: 10713d3e96789d077ae7d3389452a5f6c397ddf43a50c071cbfe2d12725970de
         x-checker-data:
           type: gnome
           name: loupe
