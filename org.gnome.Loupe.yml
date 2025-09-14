@@ -72,22 +72,6 @@ modules:
           versions:
             <: '40.0'
 
-  - name: glycin-loaders
-    buildsystem: meson
-    config-opts:
-      - -Dloaders=glycin-image-rs,glycin-heif,glycin-jxl,glycin-svg,glycin-raw,glycin-jpeg2000
-      - -Dlibglycin=false
-      - -Dlibglycin-gtk4=false
-      - -Dglycin-thumbnailer=false
-      - -Dtests=false
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.0.tar.xz
-        sha256: e39c3ca4f5bd6905f19f090456940650c8de1f217d2edb1f46ee17e04e7ae502
-        x-checker-data:
-          type: gnome
-          name: glycin
-
   - name: loupe
     buildsystem: meson
     sources:
