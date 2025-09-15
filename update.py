@@ -17,11 +17,14 @@ def __main__():
     with open('org.gnome.Loupe.yml') as f:
         manifest = yaml.safe_load(f)
 
-    loupe_tarball_url = manifest['modules'][-1]['sources'][0]['url']
-    update_rust_deps(loupe_tarball_url)
+    loupe_tarball_url = module_tarball(manifest, "loupe")
+    update_rust_deps(loupe_tarball_url, "loupe")
 
-def update_rust_deps(url):
-    print("Updating Rust dependencies from", file=sys.stderr)
+    glycin_tarball_url = module_tarball(manifest, "glycin-loaders")
+    update_rust_deps(glycin_tarball_url, "glycin-loaders")
+
+def update_rust_deps(url, name):
+    print(f"Updating Rust dependencies for {name} from", file=sys.stderr)
     print(f" - <{url}>", file=sys.stderr)
     
     tar =  urllib.request.urlopen(url).read()
@@ -31,6 +34,9 @@ def update_rust_deps(url):
 
     with tempfile.NamedTemporaryFile() as f:
         f.write(lock_data)
-        subprocess.check_call(["./flatpak-builder-tools/cargo/flatpak-cargo-generator.py", f.name])
+        subprocess.check_call(["./flatpak-builder-tools/cargo/flatpak-cargo-generator.py" ,f"--output=generated-sources-{name}.json", f.name])
+
+def module_tarball(manifest, module_name):
+    return next(module for module in manifest['modules'] if module['name'] == module_name)['sources'][0]['url']
 
 __main__()

@@ -1,10 +1,10 @@
 id: org.gnome.Loupe
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-  - org.freedesktop.Sdk.Extension.llvm18
+  - org.freedesktop.Sdk.Extension.llvm20
 command: loupe
 finish-args:
   # Graphics
@@ -19,7 +19,7 @@ finish-args:
   - --filesystem=xdg-run/gvfs
   - --filesystem=xdg-run/gvfsd
 build-options:
-  append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm18/bin
+  append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm20/bin
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -75,27 +75,36 @@ modules:
   - name: glycin-loaders
     buildsystem: meson
     config-opts:
+      - -Dloaders=glycin-image-rs,glycin-heif,glycin-jxl,glycin-svg,glycin-jpeg2000
       - -Dlibglycin=false
+      - -Dlibglycin-gtk4=false
+      - -Dglycin-thumbnailer=false
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin/1.2/glycin-1.2.3.tar.xz
-        sha256: 380aafe2bfb4eca0c45b42660ebff449600d00a43b609d5b1c83f795f5c8fb3c
+        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.0.tar.xz
+        sha256: e39c3ca4f5bd6905f19f090456940650c8de1f217d2edb1f46ee17e04e7ae502
         x-checker-data:
           type: gnome
           name: glycin
+      - generated-sources-glycin-loaders.json
+      # copy generated cargo config
+      - type: shell
+        commands:
+          - mkdir .cargo
+          - cp cargo/config .cargo/
 
   - name: loupe
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/48/loupe-48.1.tar.xz
-        sha256: 10713d3e96789d077ae7d3389452a5f6c397ddf43a50c071cbfe2d12725970de
+        url: https://download.gnome.org/sources/loupe/49/loupe-49.0.tar.xz
+        sha256: a2ce554e8e5e1d16b836e46f1652767db2bb3bd4f7dcaa87f2569af10b863938
         x-checker-data:
           type: gnome
           name: loupe
       # generated via flatpak-builder-tools
-      - generated-sources.json
+      - generated-sources-loupe.json
       # copy generated cargo config
       - type: shell
         commands:
