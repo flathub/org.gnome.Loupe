@@ -4,7 +4,7 @@ runtime-version: '49'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-  - org.freedesktop.Sdk.Extension.llvm20
+  - org.freedesktop.Sdk.Extension.llvm21
 command: loupe
 finish-args:
   # Graphics
@@ -19,7 +19,7 @@ finish-args:
   - --filesystem=xdg-run/gvfs
   - --filesystem=xdg-run/gvfsd
 build-options:
-  append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm20/bin
+  append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm21/bin
 cleanup:
   - /include
   - /lib/pkgconfig
