@@ -82,8 +82,8 @@ modules:
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.0.tar.xz
-        sha256: e39c3ca4f5bd6905f19f090456940650c8de1f217d2edb1f46ee17e04e7ae502
+        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.1.tar.xz
+        sha256: f2a37ec85bb455af1e423b366de1c93e8f4f0deaa3c4c62c75c7528c6989eeb0
         x-checker-data:
           type: gnome
           name: glycin
