@@ -66,15 +66,15 @@ modules:
   - name: glycin-loaders
     buildsystem: meson
     config-opts:
-      - -Dloaders=glycin-image-rs,glycin-heif,glycin-jxl,glycin-svg,glycin-jpeg2000
+      - -Dloaders=glycin-jpeg2000
       - -Dlibglycin=false
       - -Dlibglycin-gtk4=false
       - -Dglycin-thumbnailer=false
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.0.tar.xz
-        sha256: e39c3ca4f5bd6905f19f090456940650c8de1f217d2edb1f46ee17e04e7ae502
+        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.4.tar.xz
+        sha256: c38147200f5804a257341678e8bce314bcff79a76f986a8c3279d9d848f8bff7
         x-checker-data:
           type: gnome
           name: glycin
@@ -89,8 +89,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/49/loupe-49.0.tar.xz
-        sha256: a2ce554e8e5e1d16b836e46f1652767db2bb3bd4f7dcaa87f2569af10b863938
+        url: https://download.gnome.org/sources/loupe/49/loupe-49.1.tar.xz
+        sha256: 30098bc979a1c87a2ecb27b4a5ab725abf900bd710bb9c2bcc0c942d515c51c5
         x-checker-data:
           type: gnome
           name: loupe
