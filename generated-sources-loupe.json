@@ -119,6 +119,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/async-global-executor/async-global-executor-3.1.0.crate",
+        "sha256": "13f937e26114b93193065fd44f507aa2e9169ad0cdabbb996920b1fe1ddea7ba",
+        "dest": "cargo/vendor/async-global-executor-3.1.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"13f937e26114b93193065fd44f507aa2e9169ad0cdabbb996920b1fe1ddea7ba\", \"files\": {}}",
+        "dest": "cargo/vendor/async-global-executor-3.1.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/async-io/async-io-2.5.0.crate",
         "sha256": "19634d6336019ef220f09fd31168ce5c184b295cbf80345437cc36094ef223ca",
         "dest": "cargo/vendor/async-io-2.5.0"
@@ -1094,14 +1107,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/glycin/glycin-3.0.0.crate",
-        "sha256": "3b70ebfc9e7c504e99580122d58174a3976f086ec55834692e44dd7489d36ed9",
-        "dest": "cargo/vendor/glycin-3.0.0"
+        "url": "https://static.crates.io/crates/glycin/glycin-3.0.4.crate",
+        "sha256": "70036c016aba916ccf079a5f0149027c4016d6a5fdaae09019a77e93062f2bd3",
+        "dest": "cargo/vendor/glycin-3.0.4"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"3b70ebfc9e7c504e99580122d58174a3976f086ec55834692e44dd7489d36ed9\", \"files\": {}}",
-        "dest": "cargo/vendor/glycin-3.0.0",
+        "contents": "{\"package\": \"70036c016aba916ccf079a5f0149027c4016d6a5fdaae09019a77e93062f2bd3\", \"files\": {}}",
+        "dest": "cargo/vendor/glycin-3.0.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1120,14 +1133,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/glycin-utils/glycin-utils-4.0.0.crate",
-        "sha256": "127d5f71bf307364e30ef0b6720a7a9557b2b642a933c2e048ac5f5fba2dc1c3",
-        "dest": "cargo/vendor/glycin-utils-4.0.0"
+        "url": "https://static.crates.io/crates/glycin-utils/glycin-utils-4.0.4.crate",
+        "sha256": "7dfec0cd29d5ecfb1dd723868e22e2c49441020f35d5f14307018ff0a1679e2f",
+        "dest": "cargo/vendor/glycin-utils-4.0.4"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"127d5f71bf307364e30ef0b6720a7a9557b2b642a933c2e048ac5f5fba2dc1c3\", \"files\": {}}",
-        "dest": "cargo/vendor/glycin-utils-4.0.0",
+        "contents": "{\"package\": \"7dfec0cd29d5ecfb1dd723868e22e2c49441020f35d5f14307018ff0a1679e2f\", \"files\": {}}",
+        "dest": "cargo/vendor/glycin-utils-4.0.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3057,19 +3070,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/windows-link/windows-link-0.2.0.crate",
-        "sha256": "45e46c0661abb7180e7b9c281db115305d49ca1709ab8242adf09666d2173c65",
-        "dest": "cargo/vendor/windows-link-0.2.0"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"45e46c0661abb7180e7b9c281db115305d49ca1709ab8242adf09666d2173c65\", \"files\": {}}",
-        "dest": "cargo/vendor/windows-link-0.2.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/windows-sys/windows-sys-0.52.0.crate",
         "sha256": "282be5f36a8ce781fad8c8ae18fa3f9beff57ec1b52cb3de0789201425d9a33d",
         "dest": "cargo/vendor/windows-sys-0.52.0"
@@ -3091,19 +3091,6 @@
         "type": "inline",
         "contents": "{\"package\": \"f2f500e4d28234f72040990ec9d39e3a6b950f9f22d3dba18416c35882612bcb\", \"files\": {}}",
         "dest": "cargo/vendor/windows-sys-0.60.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/windows-sys/windows-sys-0.61.0.crate",
-        "sha256": "e201184e40b2ede64bc2ea34968b28e33622acdbbf37104f0e4a33f7abe657aa",
-        "dest": "cargo/vendor/windows-sys-0.61.0"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"e201184e40b2ede64bc2ea34968b28e33622acdbbf37104f0e4a33f7abe657aa\", \"files\": {}}",
-        "dest": "cargo/vendor/windows-sys-0.61.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
