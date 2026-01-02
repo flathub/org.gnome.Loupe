@@ -1276,14 +1276,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/gufo-exif/gufo-exif-0.3.0.crate",
-        "sha256": "9d2b06ed83ed41cff519aeac7bc7ae4580c7b8ffd8f5688f4dcc362df1f1d349",
-        "dest": "cargo/vendor/gufo-exif-0.3.0"
+        "url": "https://static.crates.io/crates/gufo-exif/gufo-exif-0.3.1.crate",
+        "sha256": "e611ff8dfb0816bdadf498bb05f43868fff9ea5d71b7a0f2dc7c782b62a7bc1f",
+        "dest": "cargo/vendor/gufo-exif-0.3.1"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"9d2b06ed83ed41cff519aeac7bc7ae4580c7b8ffd8f5688f4dcc362df1f1d349\", \"files\": {}}",
-        "dest": "cargo/vendor/gufo-exif-0.3.0",
+        "contents": "{\"package\": \"e611ff8dfb0816bdadf498bb05f43868fff9ea5d71b7a0f2dc7c782b62a7bc1f\", \"files\": {}}",
+        "dest": "cargo/vendor/gufo-exif-0.3.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
