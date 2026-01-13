@@ -1354,14 +1354,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/glycin/glycin-3.0.4.crate",
-        "sha256": "70036c016aba916ccf079a5f0149027c4016d6a5fdaae09019a77e93062f2bd3",
-        "dest": "cargo/vendor/glycin-3.0.4"
+        "url": "https://static.crates.io/crates/glycin/glycin-3.0.7.crate",
+        "sha256": "502ac59dc785b95521e7deea20e292f3501a11752600c4f37cf34676f794b4e3",
+        "dest": "cargo/vendor/glycin-3.0.7"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"70036c016aba916ccf079a5f0149027c4016d6a5fdaae09019a77e93062f2bd3\", \"files\": {}}",
-        "dest": "cargo/vendor/glycin-3.0.4",
+        "contents": "{\"package\": \"502ac59dc785b95521e7deea20e292f3501a11752600c4f37cf34676f794b4e3\", \"files\": {}}",
+        "dest": "cargo/vendor/glycin-3.0.7",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4227,14 +4227,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/zune-jpeg/zune-jpeg-0.4.20.crate",
-        "sha256": "fc1f7e205ce79eb2da3cd71c5f55f3589785cb7c79f6a03d1c8d1491bda5d089",
-        "dest": "cargo/vendor/zune-jpeg-0.4.20"
+        "url": "https://static.crates.io/crates/zune-jpeg/zune-jpeg-0.4.21.crate",
+        "sha256": "29ce2c8a9384ad323cf564b67da86e21d3cfdff87908bc1223ed5c99bc792713",
+        "dest": "cargo/vendor/zune-jpeg-0.4.21"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"fc1f7e205ce79eb2da3cd71c5f55f3589785cb7c79f6a03d1c8d1491bda5d089\", \"files\": {}}",
-        "dest": "cargo/vendor/zune-jpeg-0.4.20",
+        "contents": "{\"package\": \"29ce2c8a9384ad323cf564b67da86e21d3cfdff87908bc1223ed5c99bc792713\", \"files\": {}}",
+        "dest": "cargo/vendor/zune-jpeg-0.4.21",
         "dest-filename": ".cargo-checksum.json"
     },
     {
