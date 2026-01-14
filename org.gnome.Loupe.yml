@@ -55,8 +55,8 @@ modules:
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libgweather/4.4/libgweather-4.4.4.tar.xz
-        sha256: 7017677753cdf7d1fdc355e4bfcdb1eba8369793a8df24d241427a939cbf4283
+        url: https://download.gnome.org/sources/libgweather/4.5/libgweather-4.5.0.tar.xz
+        sha256: e464c1aebe8117c8a170206d7baefe730393b7e98044c2cd97b3aa8604ef12aa
         x-checker-data:
           type: gnome
           name: libgweather
