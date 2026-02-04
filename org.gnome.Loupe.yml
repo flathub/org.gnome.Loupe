@@ -60,6 +60,7 @@ modules:
         x-checker-data:
           type: gnome
           name: libgweather
+          version-scheme: odd-minor-is-unstable
           versions:
             <: '40.0'
 
