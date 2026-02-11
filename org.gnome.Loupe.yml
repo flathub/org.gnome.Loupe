@@ -55,8 +55,8 @@ modules:
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libgweather/4.4/libgweather-4.4.4.tar.xz
-        sha256: 7017677753cdf7d1fdc355e4bfcdb1eba8369793a8df24d241427a939cbf4283
+        url: https://download.gnome.org/sources/libgweather/4.5/libgweather-4.5.0.tar.xz
+        sha256: e464c1aebe8117c8a170206d7baefe730393b7e98044c2cd97b3aa8604ef12aa
         x-checker-data:
           type: gnome
           name: libgweather
@@ -73,8 +73,8 @@ modules:
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.7.tar.xz
-        sha256: c416ac29b6d3ecdc67b90c15537ba1293ceb7af96fa101cae67b7d1d37e50ab0
+        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.8.tar.xz
+        sha256: 6b9aef4f626bf969dfd04b563b83d521271a30c3d6df6a6a8463fd55490891df
         x-checker-data:
           type: gnome
           name: glycin
