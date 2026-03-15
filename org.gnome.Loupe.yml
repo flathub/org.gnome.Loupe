@@ -1,6 +1,6 @@
 id: org.gnome.Loupe
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50beta'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -67,15 +67,15 @@ modules:
   - name: glycin-loaders
     buildsystem: meson
     config-opts:
-      - -Dloaders=glycin-jpeg2000
+      - -Dloaders=glycin-raw
       - -Dlibglycin=false
       - -Dlibglycin-gtk4=false
       - -Dglycin-thumbnailer=false
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.7.tar.xz
-        sha256: c416ac29b6d3ecdc67b90c15537ba1293ceb7af96fa101cae67b7d1d37e50ab0
+        url: https://download.gnome.org/sources/glycin/2.1/glycin-2.1.0.tar.xz
+        sha256: 59f3742b3f231738738766afffa2874c839bfdabffcfa5fcb0f8ffe5509ad4e0
         x-checker-data:
           type: gnome
           name: glycin
@@ -90,8 +90,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/49/loupe-49.2.tar.xz
-        sha256: 5853e75cceba7fa2bea01be273cd2f0a3061941e7bdfe3a008b233171067142c
+        url: https://download.gnome.org/sources/loupe/50/loupe-50.0.tar.xz
+        sha256: 7ae4fbae5e19316aa640c56f80dc5a791448a62dd8f0ff06e29a58bad813a994
         x-checker-data:
           type: gnome
           name: loupe
