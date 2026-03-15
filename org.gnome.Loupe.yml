@@ -67,7 +67,7 @@ modules:
   - name: glycin-loaders
     buildsystem: meson
     config-opts:
-      - -Dloaders=glycin-jpeg2000
+      - -Dloaders=glycin-raw
       - -Dlibglycin=false
       - -Dlibglycin-gtk4=false
       - -Dglycin-thumbnailer=false
