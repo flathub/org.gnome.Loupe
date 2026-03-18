@@ -1,6 +1,6 @@
 id: org.gnome.Loupe
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -46,6 +46,16 @@ modules:
           type: gnome
           name: geocode-glib
 
+  - name: gweather-location
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/gweather-locations/2026/gweather-locations-2026.2.tar.xz
+        sha256: e7570a3661e0a752a06387b2032585cf588fc56770b1f9f39f1a55d17b2835fe
+        x-checker-data:
+          type: gnome
+          name: gweather-locations
+
   - name: libgweather
     buildsystem: meson
     config-opts:
@@ -55,43 +65,21 @@ modules:
       - -Dtests=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libgweather/4.4/libgweather-4.4.4.tar.xz
-        sha256: 7017677753cdf7d1fdc355e4bfcdb1eba8369793a8df24d241427a939cbf4283
+        url: https://download.gnome.org/sources/libgweather/4.6/libgweather-4.6.0.tar.xz
+        sha256: 7f5d0e8c9685ef2ff46c2f3a57cae48d7bf3540b2d83921f889ef28e6a876788
         x-checker-data:
           type: gnome
           name: libgweather
           version-scheme: odd-minor-is-unstable
           versions:
-            <: '40.0'
-
-  - name: glycin-loaders
-    buildsystem: meson
-    config-opts:
-      - -Dloaders=glycin-jpeg2000
-      - -Dlibglycin=false
-      - -Dlibglycin-gtk4=false
-      - -Dglycin-thumbnailer=false
-      - -Dtests=false
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/glycin/2.0/glycin-2.0.7.tar.xz
-        sha256: c416ac29b6d3ecdc67b90c15537ba1293ceb7af96fa101cae67b7d1d37e50ab0
-        x-checker-data:
-          type: gnome
-          name: glycin
-      - generated-sources-glycin-loaders.json
-      # copy generated cargo config
-      - type: shell
-        commands:
-          - mkdir .cargo
-          - cp cargo/config .cargo/
+            <: '40.alpha'
 
   - name: loupe
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/49/loupe-49.2.tar.xz
-        sha256: 5853e75cceba7fa2bea01be273cd2f0a3061941e7bdfe3a008b233171067142c
+        url: https://download.gnome.org/sources/loupe/50/loupe-50.0.tar.xz
+        sha256: 7ae4fbae5e19316aa640c56f80dc5a791448a62dd8f0ff06e29a58bad813a994
         x-checker-data:
           type: gnome
           name: loupe
