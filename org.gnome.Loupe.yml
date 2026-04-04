@@ -23,13 +23,7 @@ build-options:
 cleanup:
   - /include
   - /lib/pkgconfig
-  - /man
-  - /share/doc
-  - /share/gtk-doc
-  - /share/man
   - /share/pkgconfig
-  - '*.la'
-  - '*.a'
 modules:
   - name: geocode-glib
     buildsystem: meson
