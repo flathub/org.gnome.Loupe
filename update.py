@@ -29,6 +29,9 @@ def __main__():
     loupe_tarball_url = module_tarball(manifest, "loupe")
     update_rust_deps(loupe_tarball_url, "loupe")
 
+    # glycin_tarball_url = module_tarball(manifest, "glycin-loaders")
+    # update_rust_deps(glycin_tarball_url, "glycin-loaders")
+
 
 def update_rust_deps(url, name):
     print(f"Updating Rust dependencies for {name} from", file=sys.stderr)
@@ -41,6 +44,7 @@ def update_rust_deps(url, name):
 
     with tempfile.NamedTemporaryFile() as f:
         f.write(lock_data)
+        f.flush()
         subprocess.check_call(
             [
                 "./flatpak-builder-tools/cargo/flatpak-cargo-generator.py",

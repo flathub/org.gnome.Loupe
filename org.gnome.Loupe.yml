@@ -1,10 +1,10 @@
 id: org.gnome.Loupe
 runtime: org.gnome.Platform
-runtime-version: '50'
+runtime-version: '51'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-  - org.freedesktop.Sdk.Extension.llvm21
+  - org.freedesktop.Sdk.Extension.llvm22
 command: loupe
 finish-args:
   # Graphics
@@ -19,7 +19,7 @@ finish-args:
   - --filesystem=xdg-run/gvfs
   - --filesystem=xdg-run/gvfsd
 build-options:
-  append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm21/bin
+  append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm22/bin
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -46,7 +46,7 @@ modules:
           type: gnome
           name: geocode-glib
 
-  - name: gweather-location
+  - name: gweather-locations
     buildsystem: meson
     sources:
       - type: archive
@@ -78,8 +78,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/50/loupe-50.0.tar.xz
-        sha256: 7ae4fbae5e19316aa640c56f80dc5a791448a62dd8f0ff06e29a58bad813a994
+        url: https://download.gnome.org/sources/loupe/51/loupe-51.0.tar.xz
+        sha256: 13fa9990565ef917902f777cfce091ab60adb8a114a9f6cca274dfc5c0aae661
         x-checker-data:
           type: gnome
           name: loupe
