@@ -50,7 +50,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gweather-locations/2026/gweather-locations-2026.2.tar.xz
+        url: 
+          https://download.gnome.org/sources/gweather-locations/2026/gweather-locations-2026.2.tar.xz
         sha256: e7570a3661e0a752a06387b2032585cf588fc56770b1f9f39f1a55d17b2835fe
         x-checker-data:
           type: gnome
@@ -72,14 +73,14 @@ modules:
           name: libgweather
           version-scheme: odd-minor-is-unstable
           versions:
-            <: '40.alpha'
+            <: 40.alpha
 
   - name: loupe
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/loupe/51/loupe-51.0.tar.xz
-        sha256: 13fa9990565ef917902f777cfce091ab60adb8a114a9f6cca274dfc5c0aae661
+        url: https://download.gnome.org/sources/loupe/51/loupe-51.1.tar.xz
+        sha256: a38907d01bb6e027aeb772d10bc6cc2f92fde54d2090f6352dca8e84606e7730
         x-checker-data:
           type: gnome
           name: loupe
